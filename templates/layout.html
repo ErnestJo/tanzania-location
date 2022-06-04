@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <title>Location API</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-1 " href="#">Tanzania Location API</span>
+        <a class="nav-link" href="https://github.com/jhon-swai/tanzania_locations_api/blob/main/README.md">Basic Instructions</a>
+      </div>
+    </nav>
+
+    <div class=page>
+      
+      <div class=metanav>
+      {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+      {% endfor %}
+
+      <!-- Here is where the content goes -->
+      {% block content %}{% endblock %}
+    </div>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <div class="small text-center text-muted">Copyright &copy; 2022 - Chinaa Swai</div>
+      </div>
+    </footer>
+  
+  </body>
+
+  <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  
+</html>
